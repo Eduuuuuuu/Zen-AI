@@ -1,26 +1,27 @@
 const button = document.getElementById('login')
 
-const validarLogin = () => {
+
+const validarLogin = async () => {
     const email = document.getElementById('email').value
-    const senha = document.getElementById('password').value
+    const password = document.getElementById('password').value
 
     const urlLogin = 'https://back-login.vercel.app/usuarios'
 
-    const ListUsers = await fetch(urlLogin)
+    const listUsers = await fetch(urlLogin)
 
-    const objUsers = await ListUsers.json()
+    const objUsers = await listUsers.json()
 
     if (email == '' || password == '') {
-        alert('por favor preencha todos os campos !!')
+        alert('Por Favor preencha todos os campos !!')
     } else {
 
         let validaUser = false
 
         objUsers.forEach(user => {
 
-            if (user.email == user && user.senha == password) {
+            if (user.email == email && user.senha == password) {
                 validaUser = true
-                window.Location.href = '../html/home.html'
+                window.location.href = '../html/home.html'
             }
         })
 

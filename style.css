@@ -29,7 +29,9 @@ label{
     display: flex;
     color: white;
     font-family: "Cabin", sans-serif;
+    font-size: 25px;
     padding-left: 10px;
+    padding-top: 50px;
 }
 
 .inputs{
@@ -45,4 +47,12 @@ input{
     border-radius: 10px;
     width: 344px;
     height: 59px;
+    padding-left: 10px;
+}
+
+button{
+    width: 162px;
+    height: 52px;
+    border-radius: 10px;
+    font-size: 25px;
 }

@@ -45,6 +45,6 @@ const respostaIa = (respostaTextIa) => {
 
 button.addEventListener('click', () => {
     //id do input que o usuario vai fazer a pergunta
-    const question = document.getElementById('ask--user')
+    const question = document.getElementById('ask--user').value
     consultarGemini(question)
 })
